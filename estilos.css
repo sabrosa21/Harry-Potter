@@ -47,6 +47,11 @@ nav a{
 	padding: 0 10px;
 }
 
+nav a:hover{
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+
 .home{
 	height: 100vh;
 	background-image: url("Imagens/darkclouds.jpg");
@@ -74,7 +79,6 @@ header{
 main{
 	position: relative;
 	color: white;
-	/* z-index: -1; */
 }
 
 h2{
@@ -90,6 +94,10 @@ h2{
 	display: inline-block;
 	position: relative;
 	text-align:center;
+}
+
+.personprinc figcaption{
+	padding-bottom: 15px; 
 }
 
 
@@ -111,12 +119,23 @@ h2{
 	opacity: 0;
 }
 
-figure:hover{
-	
-	background:rgba(255,215,0,0.1);
+.vermais a{
+	text-decoration: none;
+	color: whitesmoke;
 }
 
- figure a:hover .vermais{
+.vermais a:hover{
+	color: rgb(255,215,0);
+	text-shadow: 1px 1px 2px grey;
+}
+
+
+figure:hover{
+	background:rgba(255,215,0,0.05);
+	border-radius: 5px;
+}
+
+ figure:hover .vermais{
 	opacity: 1;
 }
 
@@ -129,9 +148,7 @@ figure:hover{
 	color: gold;
 	opacity: 0.6;
 	outline: 0;
-
 }
-
 
 .btn_go:hover{
 	opacity: 1;
@@ -139,8 +156,6 @@ figure:hover{
 	border-color: white;
 	transition: all 0.3s ease-out;
 }
-
-
 
 #introducao, .autora, .video, .inscricao{
 	background-color: #F7F7F7;
@@ -237,7 +252,6 @@ caption{
 .tabelaproducao td{
 	border: 1px solid grey;
 	padding: 10px;
-	font-size: 18px !important;
 }
 
 footer{
@@ -246,7 +260,6 @@ footer{
 	background-repeat: no-repeat;
 	background-position: bottom;
 	box-shadow: -2px 1px 10px 1px black;
-	/* z-index: 10; */
 	text-align: center;
 	padding: 25px 0;
 }
@@ -277,8 +290,24 @@ footer{
 	text-shadow: 0.5px 0.5px 0.5px grey;
 }
 
+#topo{
+	font-size: 15px;
+	background: none;
+	padding: 10px;
+	color: gold; 
+	border: 1px dashed gold; 
+}
 
-/***********************Equipas*******************/
+#topo:hover{
+	color: white;
+	text-shadow: 0.5px 0.5px 0.5px grey;
+	border-color: white;
+}
+
+
+/******************************************************
+*********************** PAG EQUIPAS *******************
+*******************************************************/
 
 .bannerequipas{
 	height: 400px;
@@ -313,22 +342,15 @@ iframe{
 	height: 250px;
 }
 
-/*.inscricao{
-	height: 400px;
-	padding-right: 100px; padding-left: 100px;
-}*/
-
 .formulario{
 	border-spacing:0;
 }
 
 fieldset{
-	
 	width:20%;
 	padding:0;
 	margin-right: auto;
-	margin-left: auto;
-	
+	margin-left: auto;	
 }
 
 
@@ -339,29 +361,34 @@ fieldset{
 
 .formulario td{
 	text-align: center;
-	font-size: 15px;
+	font-size: 20px;
 	padding:0;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   opacity: 1; /* Firefox */
+  font-size: 20px;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: black;
+  font-size: 20px;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: black;
+  font-size: 20px;
 }
 
-.formulario input{
+.formulario input:not([type="submit"]):not([type="reset"]):not([type="radio"]){
 	background-color: transparent;
 	border:0;
 	border-bottom: 2px solid brown;
 	outline: 0;
 	width:300px;
+	height: 25px;
+	font-size: 20px;
 }
 
 .formulario input[type="radio"]{
@@ -370,9 +397,9 @@ fieldset{
 
 
 .formulario img{
-	width: 80px;
+	width: 100px;
 	height: auto;
-	padding: 5px 15px;
+	padding: 40px 100px;
 }
 
 .submeter{
@@ -380,21 +407,24 @@ fieldset{
 	width:100%;
 	height: 30px !important;
 	text-transform:uppercase;
-
-}
-
-.submeter a{
-	text-decoration: none;
-	color: black;
 }
 
 .submeter i{
 	padding-right: 15px;
 }
 
-.submeter td:first-child{
+.submeter td:first-child, .submeter input[type="reset"]{
 	background-color: #A91932;
 	color: white;
+}
+
+.submeter input{
+	background: none;
+	padding: 10px;
+	border: 0;
+	font-size: 18px;
+	outline: 0;
+	cursor: pointer;
 }
 
 .chapeu{
@@ -409,29 +439,28 @@ fieldset{
 	width: 100%;
 }
 
-
-
-
-
-/*.chapeu{
-	float: left;
-	height: 300px;
-
-}
-
-.dados input{
-	background-color: transparent;
-	border:0;
-	border-bottom: 2px solid brown;
-}*/
-
-
-/***********************MEDIA QUERIES*******************/
+/********************************************************
+*********************** MEDIA QUERIES *******************
+*********************************************************/
 
 @media only screen and (max-width: 599px){
 
+	nav{
+		background: rgba(92, 92, 92, 0.8);
+		height: 45px;
+	}
+
+	nav img{
+		width: 50px;
+		height: auto;
+	}
+
+	nav a{
+		line-height: 45px;
+	}
+	
 	.logobanner img{
-		width: 400px;
+		width: 300px;
 		height: auto;
 	}
 
@@ -446,6 +475,7 @@ fieldset{
 	.flex_autora{
 		flex-wrap: wrap;
 		justify-content: center;
+		padding: 0;
 	}
 
 	.flex_autora p{
@@ -453,13 +483,94 @@ fieldset{
 	}
 
 	#introducao p, .producao p{
-	
-	padding: 0 10%;
-	text-align: justify;
+		padding: 0 10%;
+		text-align: justify;
 	}
+
+	.tabelaproducao, .tabelaproducao td{
+		font-size: 10px;
+		padding: 5px;
+	}
+
+	caption{
+		font-size: 7px !important;
+	}
+
+	footer{
+		height: 100px;
+	}
+
+	.tabelafooter{
+		font-size: 10px !important;
+	}
+
+	.tabelafooter img{
+		width: 75px;
+		height: auto;
+	}
+
+	.tabelafooter td{
+		padding: 0 !important;
+	}
+
+	.tabelafooter a[id="topo"]{
+		font-size: 8px !important;
+		padding: 5px !important;
+	}
+
+	iframe{
+		width: 375px;
+		height: 211px;
+	}
+
+	.tabequipas{
+		margin: 0;
+		font-size: 8px;
+	}
+	.tabequipas img{
+		width: 55px;
+		height: auto;
+	}
+
+	.tabequipas td{
+		padding: 5px 3px;
+	}
+
+	::placeholder{ 
+		font-size: 9px !important;	 
+	}
+
+	.formulario label{
+		font-size: 9px;
+	}
+
+	.formulario input:not([type="submit"]):not([type="reset"]):not([type="radio"]){
+		font-size: 9px !important;
+		width: 175px;
+	}
+
+	.formulario img{
+		width: 30px;
+		height: auto;
+		padding: 0 30px;
+	}
+
+	.formulario input[type="radio"]{
+		width: 5px;
+	}
+
+	.submeter input{
+		font-size: 10px;
+	}
+
+	.bannerequipas{
+		width: 100%;
+		height: 200px;
+	}
+
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px){
+@media only screen and (min-width: 600px) and (max-width: 767px){
 
 	body{
 		font-size: 15px;
@@ -474,19 +585,38 @@ fieldset{
 		margin: 0 25% 40px 25%;
 	}
 
+
 	.flex_autora{
 		flex-wrap: wrap;
 		justify-content: center;
-		padding: 0 10%;
+		padding: 0 5%;
 	}
 	
 	.flex_autora p{
 		padding: 0;
 	}
+	
+	.contain_autora p{
+		padding-left: 0 !important;
+	}
+
+	.tabequipas{
+		margin: 0 5%;
+		font-size: 15px;
+	}
+	.tabequipas img{
+		width: 75px;
+		height: auto;
+	}
+
+	.tabequipas td{
+		padding: 10px 20px;
+	}
+
 
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) and (max-width: 1023px){
 
 	.flex_autora{
 		flex-wrap: wrap;
@@ -494,6 +624,59 @@ fieldset{
 		padding: 0 10%;
 	}
 
+	.flex_autora p{
+		padding: 0;
+	}
+
+	.tabequipas{
+		margin: 0 5%;
+		font-size: 15px;
+	}
+	.tabequipas img{
+		width: 75px;
+		height: auto;
+	}
+
+	.tabequipas td{
+		padding: 10px 20px;
+	}
+
+	
+	::placeholder{ 
+		font-size: 13px !important;	 
+	}
+
+	.formulario label{
+		font-size: 13px;
+	}
+
+	.formulario input:not([type="submit"]):not([type="reset"]):not([type="radio"]){
+		font-size: 13px !important;
+		width: 250px;
+	}
+
+	.formulario img{
+		width: 70px;
+		height: auto;
+		padding: 0 30px;
+	}
+
+	.formulario input[type="radio"]{
+		width: 10px;
+	}
+
+	.submeter input{
+		font-size: 12px;
+	}
+
+}
+
+@media only screen and (min-width: 1024px){
+	.flex_autora{
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 20%;
+	}
 }
 
 

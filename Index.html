@@ -31,10 +31,8 @@
 						<img src="Imagens/harry1.png">
 					</div>
 					<div class="proxpag">
-						<a class="btn_go" href="#introducao"><i class="far fa-arrow-alt-circle-down"></i></a>
-					</div>
-					
-
+						<audio id="sound1" src="HarrySong.mp3" preload="auto"></audio><a class="btn_go" href="#introducao" onclick="document.getElementById('sound1').play();"><i class="far fa-arrow-alt-circle-down"></i></a>
+					</div>					
 				</div>
 			</section>
 		</header>
@@ -59,7 +57,6 @@
 					a quem ele considera seu maior rival.</p>
 			</section>
 
-
 			<!-- ************************************************ -->
 			<!-- ************ PERSONAGENS PRINCIPAIS ************ -->
 			<!-- ************************************************ -->
@@ -69,9 +66,9 @@
 				<ul class="personprinc">
 					<li>
 						<figure>
-							<a href="https://pt.wikipedia.org/wiki/J._K._Rowling" target="_blank"><img class="personagens" src="Imagens/hermione.jpg" alt="img_hermione"></a>
+							<img class="personagens" src="Imagens/hermione.jpg" alt="img_hermione">
 							<div class="vermais">
-								<span class="texto_mais">Ver mais...</span>
+								<a href="https://pt.wikipedia.org/wiki/Hermione_Granger" target="_blank"><span class="texto_mais">Ver mais...</span></a>
 							</div>
 							<figcaption>Hermione Granger</figcaption>
 						</figure>
@@ -79,24 +76,36 @@
 					<li>
 						<figure>
 							<img class="personagens" src="Imagens/ron.jpg" alt="img_ron">
+							<div class="vermais">
+								<a href="https://pt.wikipedia.org/wiki/Ronald_Weasley" target="_blank"><span class="texto_mais">Ver mais...</span></a>
+							</div>
 							<figcaption>Ronald Weasley</figcaption>
 						</figure>
 					</li>
 					<li>
 						<figure>
 							<img class="personagens" src="Imagens/harrypotter.jpg" alt="img_harry">
+							<div class="vermais">
+								<a href="https://pt.wikipedia.org/wiki/Harry_Potter_(personagem)" target="_blank"><span class="texto_mais">Ver mais...</span></a>
+							</div>
 							<figcaption>Harry Potter</figcaption>
 						</figure>
 					</li>
 					<li>
 						<figure>
 							<img class="personagens" src="Imagens/Albus.jpg" alt="img_albus">
+							<div class="vermais">
+								<a href="https://pt.wikipedia.org/wiki/Albus_Dumbledore" target="_blank"><span class="texto_mais">Ver mais...</span></a>
+							</div>
 							<figcaption>Albus Dumbledore</figcaption>
 						</figure>
 					</li>
 					<li>
 						<figure>
 							<img class="personagens" src="Imagens/voldmorte.jpg" alt="img_voldmorte">
+							<div class="vermais">
+								<a href="https://pt.wikipedia.org/wiki/Lord_Voldemort" target="_blank"><span class="texto_mais">Ver mais...</span></a>
+							</div>
 							<figcaption>Lord Voldemort</figcaption>
 						</figure>
 					</li>
@@ -203,6 +212,7 @@
 					<td class="laterais">&copy 2019<br>Eurico Correia</td>
 					<td><img src="Imagens/wizardingworld2.png" alt="wizarding logo"></td>
 					<td class="laterais">
+						<a id="topo" href="#inicio">Ir para o topo</a>
 						<p>
 							<a href="https://www.universalorlando.com/web/en/us/universal-orlando-resort/the-wizarding-world-of-harry-potter/hub/index.html"
 							target="_blank">Universal Orlando Resort</a>
@@ -213,9 +223,7 @@
 						</p>
 					</td>
 				</tr>
-			</table>
-			
-			
+			</table>						
 		</footer>
 	</body>
 </html>
